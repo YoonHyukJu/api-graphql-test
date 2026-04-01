@@ -1,8 +1,14 @@
 spring:
-  application:
-    name: api-graphql-test
   graphql:
     graphiql:
-      enabled: true # graphiql? ?? ??? ?? ?? (localhost:8080/graphiql)
+      enabled: true
+      path: /graphiql
+    schema:
       printer:
-        enabled: true # show-sql? ?? graphql ??? ?? ??
+        enabled: true
+
+springdoc:
+  swagger-ui:
+    enabled: true
+  api-docs:
+    enabled: true
