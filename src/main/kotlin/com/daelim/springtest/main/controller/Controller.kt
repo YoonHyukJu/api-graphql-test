@@ -42,4 +42,14 @@ class Controller {
         val response = tests.firstOrNull{it.id == userId}
         return ResponseEntity.ok().body(response)
     }
+
+    @DeleteMapping("/test/{id}")
+    fun deleteTestDto(
+        @PathVariable("id") userId: String
+    ): ResponseEntity<List<TestDto>> {
+        tests.removeIf {
+            it.id == userId
+        }
+        return ResponseEntity.ok().body(tests)
+    }
 }
