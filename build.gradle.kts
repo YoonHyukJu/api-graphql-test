@@ -38,6 +38,8 @@ dependencies {
 
 //	util
     implementation("net.datafaker:datafaker:2.1.0")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
 }
 
 tasks.withType<KotlinCompile> {
